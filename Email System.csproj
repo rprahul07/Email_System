@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6AF8C9DF-1E80-44AF-8CDE-D177D5C6CF26}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Email_System</RootNamespace>
+    <AssemblyName>Email System</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlClient, Version=4.6.1.6, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Data.SqlClient.4.8.6\lib\net461\System.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="compose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="compose.Designer.cs">
+      <DependentUpon>compose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CONFIRMATION.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CONFIRMATION.Designer.cs">
+      <DependentUpon>CONFIRMATION.cs</DependentUpon>
+    </Compile>
+    <Compile Include="primary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="primary.Designer.cs">
+      <DependentUpon>primary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="profile.Designer.cs">
+      <DependentUpon>profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sent.Designer.cs">
+      <DependentUpon>sent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="inbox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="inbox.Designer.cs">
+      <DependentUpon>inbox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="landing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="landing.Designer.cs">
+      <DependentUpon>landing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="launch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="launch.Designer.cs">
+      <DependentUpon>launch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="signup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="signup.Designer.cs">
+      <DependentUpon>signup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="compose.resx">
+      <DependentUpon>compose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CONFIRMATION.resx">
+      <DependentUpon>CONFIRMATION.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="primary.resx">
+      <DependentUpon>primary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="profile.resx">
+      <DependentUpon>profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sent.resx">
+      <DependentUpon>sent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inbox.resx">
+      <DependentUpon>inbox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="landing.resx">
+      <DependentUpon>landing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="launch.resx">
+      <DependentUpon>launch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="signup.resx">
+      <DependentUpon>signup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2024-03-22 224611.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\photo_2024-05-09_19-41-46.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\preview.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\preview1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2024-05-09 205656.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cropped nav bar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cropped nav bar %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cropped nav bar %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cropped nav bar %282%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\draft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sent.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sent confirmation.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inbox.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\compose.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output-onlinegiftools.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output-onlinegiftools %281%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output-onlinegiftools1-ezgif.com-crop.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output-onlinegiftools1-ezgif.com-crop1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output-onlinegiftools1-ezgif.com-crop2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output-onlinegiftools1-ezgif.com-crop %281%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sent1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inbox1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\draft1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sent confirmation1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sentconfirmation-ezgif.com-cut.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2024-05-10 141926.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-icon-2048x2048-ihoxz4vq.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\glass-morphism-style-credit-card-icon-cashless-vector-49298984.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inbox Icon Animation.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login-button-png-4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output-onlinegiftools %282%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2024-05-16 210431.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye-icon-hidden-icon-visible-invisible-icon-look-and-vision-hide-unhide-symbol-human-eye-magic-eye-cross-symbol-sencitive-content-see-unsee-incognito-mood-blind-sign-free-vector.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
