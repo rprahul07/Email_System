@@ -51,7 +51,7 @@ namespace Email_System
 
         private void button1_Click(object sender, EventArgs e)
         {
-            global.usr = loginusername.Text;
+            
             conn.Open();
             string st = "select name from signup_form where user_name='" + loginusername.Text + "'and password='" + loginpassword.Text + "'";
 
